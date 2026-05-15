@@ -8,5 +8,6 @@ app = Flask(__name__)
 CORS(app)
 talisman = Talisman(app, force_https=False)
 
-# Berikan tanda # noqa agar Flake8 tidak error
+# Import routes dan models di bawah agar tidak circular import
+# Kita tambahkan noqa agar Flake8 tidak protes
 from service import routes, models  # noqa: F401, E402
