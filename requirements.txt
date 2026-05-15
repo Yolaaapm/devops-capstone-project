@@ -1,7 +1,7 @@
-flask
-flask-sqlalchemy
-gunicorn
-flake8
-nose
-coverage
-pinocchio
+flask==2.2.5
+flask-talisman==1.1.0
+flask-cors==4.0.0
+gunicorn==20.1.0
+nose==1.3.7
+flake8==6.0.0
+coverage==7.2.7
