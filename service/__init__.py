@@ -4,8 +4,9 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-# Tambahkan baris ini agar aplikasi tidak error saat testing
+# Inisialisasi Security
 CORS(app)
 talisman = Talisman(app, force_https=False)
 
-from service import routes, models
+# Berikan tanda # noqa agar Flake8 tidak error
+from service import routes, models  # noqa: F401, E402
